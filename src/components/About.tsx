@@ -27,10 +27,10 @@ export const About: React.FC = () => {
 
             <div className="space-y-4 text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed font-sans">
               <p>
-                Hi, I'm Ameesh, an AI engineer passionate about artificial intelligence and software engineering. Throughout college and internships, I've focused on building real, prac projects from autonomous agents with LangGraph to RAG pipelines and data workflows.
+                Hi, I&apos;m Ameesh, an AI engineer passionate about artificial intelligence, agentic workflows, and machine learning systems. Throughout college and internships, I&apos;ve focused on building real, practical AI projects from autonomous agents with LangGraph to RAG pipelines and data workflows.
               </p>
               <p>
-                I love getting my hands dirty with the full stack: exploring how models behave, optimizing vector retrieval, writing clean APIs, and turning concepts into working software that actually solves problems.
+                I love getting my hands dirty with AI systems: exploring how models behave, optimizing vector retrieval, writing robust agent tools, and turning research concepts into working products that actually solve problems.
               </p>
             </div>
 
