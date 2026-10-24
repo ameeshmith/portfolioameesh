@@ -17,9 +17,8 @@ export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const getNumberColor = (idx: number) => {
-    if (idx === 0) return 'bg-amber-300';
-    if (idx === 1) return 'bg-pink-300';
-    return 'bg-sky-300';
+    const colors = ['bg-amber-300', 'bg-emerald-300', 'bg-pink-300', 'bg-sky-300', 'bg-purple-300'];
+    return colors[idx % colors.length];
   };
 
   return (
@@ -174,6 +173,15 @@ export const Projects: React.FC = () => {
                     • State Graph: Cyclical reflection loops with automated critique gates driving attribution accuracy to 98%.
                     <br />
                     • Checkpointing: SQLite state saver supporting background job polling and structured briefs in &lt;45s.
+                  </p>
+                )}
+                {selectedProject.id === 'agent-security-gateway' && (
+                  <p>
+                    • State Machine: LangGraph state machines pausing high-risk database drops and payments for human review while passing safe reads in &lt;3.5ms.
+                    <br />
+                    • Inbound Defense: Real-time prompt injection scanner catching and quarantining 100% of malicious override attacks before tool invocation.
+                    <br />
+                    • Governance: Role-based access control, inflight request editing, and an emergency kill switch cutting incident review time by 40%.
                   </p>
                 )}
                 {selectedProject.id === 'smart-news-synthesizer' && (

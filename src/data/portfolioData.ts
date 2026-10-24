@@ -120,6 +120,28 @@ export const portfolioData: PortfolioData = {
       demoUrl: "https://github.com/ameeshmith/fora-ai#demo",
     },
     {
+      id: "agent-security-gateway",
+      title: "AI Agent Security Gateway",
+      subtitle: "Human-in-the-Loop Guardrail & Prompt Injection Defense",
+      badge: "Security & Guardrails",
+      summary:
+        "FastAPI & LangGraph security gateway enforcing real-time prompt injection scanning, <3.5ms safe approvals, and emergency kill switches for AI agents.",
+      tags: ["Python", "FastAPI", "LangGraph", "Prompt Defense", "State Machines", "Security"],
+      metrics: [
+        { label: "Safe Read Latency", value: "<3.5ms" },
+        { label: "Destructive Actions Blocked", value: "100%" },
+        { label: "Malicious Attacks Intercepted", value: "100%" },
+        { label: "Incident Review Time", value: "-40%" },
+      ],
+      keyHighlights: [
+        "Built a security gateway for AI agents using FastAPI and LangGraph state machines, automatically approving safe read requests in <3.5ms while pausing high-risk database drops and payments for human review—eliminating 100% of unauthorized destructive actions.",
+        "Developed an inbound prompt injection scanner that caught and quarantined 100% of malicious override attacks before tools were invoked, preventing rogue agent actions such as production database drops and unauthorized $5,000+ financial transfers.",
+        "Created a role-based permission system and emergency kill switch that let operators safely edit dangerous requests in flight, stopping runaway agent loops and cutting incident review time by 40%.",
+      ],
+      githubUrl: "https://github.com/ameeshmith/agent-security-gateway",
+      demoUrl: "https://github.com/ameeshmith/agent-security-gateway#demo",
+    },
+    {
       id: "smart-news-synthesizer",
       title: "Smart News Synthesizer",
       subtitle: "Indian Patent Published System",
