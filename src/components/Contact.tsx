@@ -6,7 +6,7 @@ import {
   Check,
   Phone,
   ArrowUpRight,
-  Sparkles,
+  MessageSquare,
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './icons';
 
@@ -21,18 +21,28 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-8 sm:py-12 border-t border-zinc-200 dark:border-zinc-800">
-      <div className="rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 space-y-6">
+    <section id="contact" className="py-10 space-y-6">
+      {/* Section Header */}
+      <div className="flex items-center gap-3">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold tracking-wider uppercase bg-amber-300 dark:bg-amber-900 text-amber-950 dark:text-amber-100 border-2 border-zinc-950 dark:border-zinc-700 shadow-[2px_2px_0px_0px_#09090b]">
+          <MessageSquare className="w-3.5 h-3.5 text-amber-800 dark:text-amber-300" />
+          <span>05 SAY HI</span>
+        </span>
+        <div className="h-[2px] flex-1 bg-zinc-300 dark:bg-zinc-800" />
+      </div>
+
+      {/* Main Contact Tactile Card */}
+      <div className="tactile-card rounded-2xl p-6 sm:p-8 space-y-6">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400 font-semibold">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Open to Opportunities</span>
+          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md text-[11px] font-mono uppercase tracking-wider bg-emerald-100 dark:bg-emerald-950/70 border-2 border-emerald-500/50 text-emerald-800 dark:text-emerald-300 font-bold">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>Open to Engineering & AI Roles</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+          <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-zinc-950 dark:text-zinc-50 font-sans">
             Let's build reliable AI systems together.
           </h2>
-          <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-xl">
-            Whether you have an opening for an AI Engineer, need an architecture review for agentic workflows, or want to discuss RAG pipeline optimizations, my inbox is open.
+          <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-mono leading-relaxed max-w-xl">
+            Whether you have an opening for an AI Engineer, need an architecture review for agentic workflows, or want to discuss RAG pipeline optimizations, my inbox is always open.
           </p>
         </div>
 
@@ -40,25 +50,25 @@ export const Contact: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
           <button
             onClick={handleCopyEmail}
-            className={`group flex items-center justify-between gap-4 px-4 py-3 rounded-xl border text-xs sm:text-sm font-mono transition-all duration-200 cursor-pointer ${
+            className={`tactile-btn flex-1 flex items-center justify-between gap-4 px-4 py-3 rounded-xl border-2 border-zinc-950 dark:border-zinc-700 text-xs sm:text-sm font-mono cursor-pointer transition-all ${
               copied
-                ? 'bg-emerald-50 dark:bg-emerald-950/70 border-emerald-400 dark:border-emerald-500/60 text-emerald-700 dark:text-emerald-300'
-                : 'bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 hover:border-zinc-400'
+                ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-200'
+                : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100'
             }`}
           >
             <div className="flex items-center gap-2.5">
-              <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-              <span className="font-semibold">{personal.email}</span>
+              <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+              <span className="font-bold truncate">{personal.email}</span>
             </div>
-            <div className="flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400">
+            <div className="flex items-center gap-1.5 text-xs text-zinc-600 dark:text-zinc-400 shrink-0">
               {copied ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                  <span className="text-emerald-600 dark:text-emerald-400 font-medium">Copied!</span>
+                  <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                  <span className="text-emerald-600 dark:text-emerald-400 font-bold">Copied!</span>
                 </>
               ) : (
                 <>
-                  <Copy className="w-3.5 h-3.5" />
+                  <Copy className="w-4 h-4" />
                   <span>Copy</span>
                 </>
               )}
@@ -70,7 +80,7 @@ export const Contact: React.FC = () => {
             href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${encodeURIComponent('Discussion: AI & Software Engineering Opportunity')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-zinc-900 dark:bg-zinc-100 hover:opacity-90 text-white dark:text-zinc-900 font-semibold text-xs tracking-wide uppercase transition-all shadow-sm cursor-pointer"
+            className="tactile-btn inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-amber-400 dark:bg-amber-300 text-zinc-950 font-black text-xs font-mono uppercase tracking-wider border-2 border-zinc-950 shadow-[3px_3px_0px_0px_#09090b] cursor-pointer"
             title="Compose email in Gmail"
           >
             <span>Send Email</span>
@@ -79,33 +89,42 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Contact Links Strip */}
-        <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800/80 grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs text-zinc-600 dark:text-zinc-400">
+        <div className="pt-4 border-t-2 border-zinc-200 dark:border-zinc-800 grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
           <a
             href={personal.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 p-2.5 rounded-lg bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 hover:text-zinc-950 dark:hover:text-white transition-colors"
+            className="tactile-btn flex items-center justify-between p-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 border-2 border-zinc-950 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 hover:text-emerald-600 transition-colors"
           >
-            <GithubIcon className="w-4 h-4 text-zinc-500" />
-            <span>github.com/ameeshmith</span>
+            <div className="flex items-center gap-2">
+              <GithubIcon className="w-4 h-4" />
+              <span className="font-bold">GitHub</span>
+            </div>
+            <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500" />
           </a>
 
           <a
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 p-2.5 rounded-lg bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 hover:text-zinc-950 dark:hover:text-white transition-colors"
+            className="tactile-btn flex items-center justify-between p-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 border-2 border-zinc-950 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 hover:text-sky-600 transition-colors"
           >
-            <LinkedinIcon className="w-4 h-4 text-zinc-500" />
-            <span>linkedin.com/in/ameeshmith</span>
+            <div className="flex items-center gap-2">
+              <LinkedinIcon className="w-4 h-4" />
+              <span className="font-bold">LinkedIn</span>
+            </div>
+            <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500" />
           </a>
 
           <a
             href={`tel:${personal.phone.replace(/\s+/g, '')}`}
-            className="flex items-center gap-2 p-2.5 rounded-lg bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 hover:text-zinc-950 dark:hover:text-white transition-colors"
+            className="tactile-btn flex items-center justify-between p-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 border-2 border-zinc-950 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 hover:text-emerald-600 transition-colors"
           >
-            <Phone className="w-4 h-4 text-zinc-500" />
-            <span>{personal.phone}</span>
+            <div className="flex items-center gap-2">
+              <Phone className="w-4 h-4" />
+              <span className="font-bold">{personal.phone}</span>
+            </div>
+            <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500" />
           </a>
         </div>
       </div>

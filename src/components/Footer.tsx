@@ -7,23 +7,27 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="py-8 border-t border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 text-xs font-mono">
+    <footer className="py-10 border-t-2 border-zinc-300 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-mono">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-        {/* Left Credit */}
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" />
-          <span>
-            © {new Date().getFullYear()} Ameesh Mithanthaya. All rights reserved.
-          </span>
+        {/* Left Status & Details */}
+        <div className="flex flex-col sm:flex-row items-center gap-3">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block animate-ping" />
+            <span className="font-bold text-zinc-900 dark:text-zinc-200">
+              ALL SYSTEMS OPERATIONAL
+            </span>
+          </div>
+          <span className="hidden sm:inline text-zinc-400">•</span>
+          <span>© {new Date().getFullYear()} Ameesh Mithanthaya</span>
         </div>
 
-        {/* Scroll To Top */}
+        {/* Tactile Scroll To Top */}
         <button
           onClick={scrollToTop}
-          className="inline-flex items-center gap-1.5 p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition-colors cursor-pointer"
+          className="tactile-btn inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800 border-2 border-zinc-950 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100 font-bold hover:bg-amber-300 hover:text-zinc-950 transition-colors cursor-pointer"
           title="Scroll to top"
         >
-          <span>Top</span>
+          <span>BACK TO TOP</span>
           <ArrowUp className="w-3.5 h-3.5" />
         </button>
       </div>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { FileText, Mail, Check, Copy } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './icons';
+import { Check, ArrowUpRight } from 'lucide-react';
 
 interface HeroProps {
   onOpenResume?: () => void;
@@ -9,108 +8,228 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
   const { personal } = portfolioData;
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(personal.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2200);
-  };
+  const [tracked, setTracked] = useState(false);
 
   return (
-    <section className="pt-2 pb-10 sm:pb-12">
-      <div className="space-y-6">
-        {/* Profile Row: Avatar on left, info on right (matches reference image) */}
-        <div className="flex items-center gap-5 sm:gap-6">
-          {/* Avatar Container with pulsating green online dot */}
-          <div className="relative shrink-0">
-            <img
-              src="/avatar.png"
-              alt={personal.name}
-              className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover object-top border border-zinc-200 dark:border-zinc-800 shadow-md"
-            />
-            <span
-              className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white dark:border-zinc-950 shadow-sm"
-              title="Available for AI / Software Engineering roles"
-            />
-          </div>
+    <section className="pt-6 pb-12 sm:pt-10 sm:pb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        {/* Left: The Tactile Shipping Manifest Card (inspired by kanishv.in) */}
+        <div className="lg:col-span-7">
+          <div className="rounded-2xl border-2 border-zinc-950 dark:border-zinc-700 bg-[#fdfcfa] dark:bg-zinc-900 shadow-[6px_6px_0px_0px_#09090b] dark:shadow-[6px_6px_0px_0px_#000] overflow-hidden transition-all">
+            {/* Top black label bar */}
+            <div className="bg-zinc-950 text-white px-4 py-2 font-mono text-xs font-bold tracking-wider uppercase flex items-center justify-between">
+              <span>Handle with care</span>
+              <span className="text-emerald-400 flex items-center gap-1.5 text-[11px]">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Ready for deployment</span>
+              </span>
+            </div>
 
-          {/* Name, Role & Location */}
-          <div className="space-y-1">
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 font-sans">
-              {personal.name}
-            </h1>
-            <p className="text-sm sm:text-base font-medium text-zinc-700 dark:text-zinc-300">
-              {personal.title}
-            </p>
-            <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
-              {personal.location}
-            </p>
+            {/* Sub-header row */}
+            <div className="grid grid-cols-2 border-b-2 border-zinc-950 dark:border-zinc-800 text-xs font-mono">
+              <div className="p-3 border-r-2 border-zinc-950 dark:border-zinc-800 space-y-0.5">
+                <div className="text-[10px] text-zinc-500 uppercase tracking-wider">Compatible with</div>
+                <div className="font-bold text-zinc-900 dark:text-zinc-100">
+                  LLMs, agents, MCP & vector DBs
+                </div>
+              </div>
+              <div className="p-3 space-y-0.5">
+                <div className="text-[10px] text-zinc-500 uppercase tracking-wider">Experience</div>
+                <div className="font-bold text-zinc-900 dark:text-zinc-100">
+                  Production AI Systems
+                </div>
+              </div>
+            </div>
+
+            {/* Contents: Name & Title */}
+            <div className="p-4 sm:p-5 border-b-2 border-zinc-950 dark:border-zinc-800 space-y-1">
+              <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
+                Contents
+              </div>
+              <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-zinc-950 dark:text-white uppercase font-sans">
+                {personal.name}
+              </h1>
+              <p className="text-sm sm:text-base font-bold text-zinc-700 dark:text-zinc-300 font-mono">
+                {personal.title} · {personal.location}
+              </p>
+            </div>
+
+            {/* Includes Checklist with Colorful Badges */}
+            <div className="p-4 sm:p-5 space-y-3 font-sans text-xs sm:text-sm">
+              <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">
+                Includes
+              </div>
+
+              {/* Trait 1: Curious */}
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-md border-2 border-zinc-950 dark:border-zinc-700 flex items-center justify-center shrink-0 bg-white dark:bg-zinc-800 shadow-[1px_1px_0px_0px_#000]">
+                  <Check className="w-3.5 h-3.5 text-zinc-950 dark:text-white stroke-[3]" />
+                </div>
+                <span className="px-2.5 py-0.5 rounded-lg border-2 border-zinc-950 bg-pink-300 text-zinc-950 font-black text-xs uppercase tracking-wide shadow-[2px_2px_0px_0px_#000] shrink-0">
+                  CURIOUS
+                </span>
+                <span className="text-zinc-700 dark:text-zinc-300 text-xs sm:text-sm">
+                  Asks why until the pipeline and failure modes make sense.
+                </span>
+              </div>
+
+              {/* Trait 2: Agentic */}
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-md border-2 border-zinc-950 dark:border-zinc-700 flex items-center justify-center shrink-0 bg-white dark:bg-zinc-800 shadow-[1px_1px_0px_0px_#000]">
+                  <Check className="w-3.5 h-3.5 text-zinc-950 dark:text-white stroke-[3]" />
+                </div>
+                <span className="px-2.5 py-0.5 rounded-lg border-2 border-zinc-950 bg-amber-300 text-zinc-950 font-black text-xs uppercase tracking-wide shadow-[2px_2px_0px_0px_#000] shrink-0">
+                  AGENTIC
+                </span>
+                <span className="text-zinc-700 dark:text-zinc-300 text-xs sm:text-sm">
+                  Builds cyclical reflection graphs with automated critique gates.
+                </span>
+              </div>
+
+              {/* Trait 3: Fast */}
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-md border-2 border-zinc-950 dark:border-zinc-700 flex items-center justify-center shrink-0 bg-white dark:bg-zinc-800 shadow-[1px_1px_0px_0px_#000]">
+                  <Check className="w-3.5 h-3.5 text-zinc-950 dark:text-white stroke-[3]" />
+                </div>
+                <span className="px-2.5 py-0.5 rounded-lg border-2 border-zinc-950 bg-sky-300 text-zinc-950 font-black text-xs uppercase tracking-wide shadow-[2px_2px_0px_0px_#000] shrink-0">
+                  FAST
+                </span>
+                <span className="text-zinc-700 dark:text-zinc-300 text-xs sm:text-sm">
+                  Gets from architecture spec to working system quicker than expected.
+                </span>
+              </div>
+
+              {/* Trait 4: Owns It */}
+              <div className="flex items-center gap-3">
+                <div className="w-5 h-5 rounded-md border-2 border-zinc-950 dark:border-zinc-700 flex items-center justify-center shrink-0 bg-white dark:bg-zinc-800 shadow-[1px_1px_0px_0px_#000]">
+                  <Check className="w-3.5 h-3.5 text-zinc-950 dark:text-white stroke-[3]" />
+                </div>
+                <span className="px-2.5 py-0.5 rounded-lg border-2 border-zinc-950 bg-emerald-300 text-zinc-950 font-black text-xs uppercase tracking-wide shadow-[2px_2px_0px_0px_#000] shrink-0">
+                  OWNS IT
+                </span>
+                <span className="text-zinc-700 dark:text-zinc-300 text-xs sm:text-sm">
+                  The model, the vector indices, the backend, and evaluation CI/CD.
+                </span>
+              </div>
+            </div>
+
+            {/* Bottom Barcode Strip */}
+            <div className="p-3 sm:p-4 bg-zinc-50 dark:bg-zinc-950 border-t-2 border-zinc-950 dark:border-zinc-800 flex flex-col items-center justify-center gap-1.5 font-mono text-[11px]">
+              {/* Barcode graphic lines */}
+              <div className="w-full flex items-center justify-center gap-[3px] h-9 px-2 overflow-hidden opacity-90 select-none">
+                {[
+                  3, 1, 2, 4, 1, 3, 2, 1, 4, 2, 1, 3, 1, 4, 2, 3, 1, 2, 1, 4,
+                  2, 3, 1, 2, 4, 1, 3, 2, 1, 4, 2, 1, 3, 2, 4, 1, 2, 3, 1, 4,
+                  2, 1, 3, 2, 1, 4, 2, 3, 1, 2, 4, 1, 3, 2, 1, 4, 2, 1, 3, 2
+                ].map((w, idx) => (
+                  <div
+                    key={idx}
+                    className="h-full bg-zinc-900 dark:bg-zinc-300"
+                    style={{ width: `${w * 1.5}px` }}
+                  />
+                ))}
+              </div>
+
+              <div className="flex items-center gap-2 text-zinc-600 dark:text-zinc-400">
+                <span>ameeshmith.github.io</span>
+                <button
+                  onClick={() => setTracked(true)}
+                  className="px-2 py-0.5 rounded-md border border-zinc-950 dark:border-zinc-700 bg-amber-300 text-zinc-950 font-bold text-[10px] uppercase shadow-[1px_1px_0px_0px_#000] cursor-pointer hover:translate-x-0.5 transition-transform"
+                >
+                  {tracked ? 'verified ✓' : 'tap to track'}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Short Personal Intro Paragraph */}
-        <p className="text-sm sm:text-base leading-relaxed text-zinc-600 dark:text-zinc-300">
-          {personal.headline}
-        </p>
+        {/* Right: Pitch, Wins Pills, and Action Buttons */}
+        <div className="lg:col-span-5 space-y-6 pt-2">
+          {/* Punchy Mission Statement */}
+          <p className="text-lg sm:text-2xl font-bold leading-snug text-zinc-900 dark:text-zinc-100 font-sans">
+            I build AI that takes the routine work, so people can do the work that matters.
+          </p>
 
-        {/* Action Row: Resume Button + Social Icons */}
-        <div className="flex items-center gap-3 pt-1">
-          {/* Resume Pill Button */}
-          <button
-            onClick={onOpenResume}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium hover:opacity-90 transition-opacity shadow-sm cursor-pointer"
-          >
-            <FileText className="w-4 h-4" />
-            <span>Resume</span>
-          </button>
-
-          {/* LinkedIn Icon Button */}
-          <a
-            href={personal.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2.5 rounded-xl text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-            title="LinkedIn Profile"
-          >
-            <LinkedinIcon className="w-4 h-4" />
-          </a>
-
-          {/* GitHub Icon Button */}
-          <a
-            href={personal.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2.5 rounded-xl text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-            title="GitHub Profile"
-          >
-            <GithubIcon className="w-4 h-4" />
-          </a>
-
-          {/* Mail (Gmail) Compose Button */}
-          <a
-            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${encodeURIComponent('Discussion: AI & Software Engineering Opportunity')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-2.5 rounded-xl text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
-            title="Compose Email in Gmail"
-          >
-            <Mail className="w-4 h-4" />
-          </a>
-
-          {/* Quick Copy Email with Toast */}
-          <button
-            onClick={handleCopyEmail}
-            className="p-2.5 rounded-xl text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors relative cursor-pointer"
-            title="Copy email to clipboard"
-          >
-            {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
-            {copied && (
-              <span className="absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded text-[10px] bg-zinc-900 text-white font-mono whitespace-nowrap shadow-md animate-in fade-in">
-                Copied!
+          {/* Highlight Wins Pills (matching Kanish's 1st / 2nd pill cards) */}
+          <div className="space-y-3">
+            {/* Win 1: Indian Patent */}
+            <div className="p-3.5 rounded-2xl border-2 border-zinc-950 bg-amber-300 dark:bg-amber-400 text-zinc-950 shadow-[4px_4px_0px_0px_#09090b] flex items-center gap-3">
+              <span className="text-xl sm:text-2xl font-black shrink-0 px-2.5 py-1 rounded-xl bg-white border-2 border-zinc-950 shadow-[2px_2px_0px_0px_#000]">
+                1st
               </span>
+              <div className="text-xs sm:text-sm font-bold leading-tight">
+                Published Indian Patent
+                <div className="text-[11px] font-normal text-zinc-800">
+                  RAG-based automated news verification & semantic retrieval
+                </div>
+              </div>
+            </div>
+
+            {/* Win 2: Pharmacovigilance */}
+            <div className="p-3.5 rounded-2xl border-2 border-zinc-950 bg-pink-200 dark:bg-pink-300 text-zinc-950 shadow-[4px_4px_0px_0px_#09090b] flex items-center gap-3">
+              <span className="text-lg sm:text-xl font-black shrink-0 px-2 py-1 rounded-xl bg-white border-2 border-zinc-950 shadow-[2px_2px_0px_0px_#000]">
+                100K+
+              </span>
+              <div className="text-xs sm:text-sm font-bold leading-tight">
+                FDA Adverse Reports Analyzed
+                <div className="text-[11px] font-normal text-zinc-800">
+                  Large-scale FAERS ETL and analytics engine
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap items-center gap-3 pt-2">
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-2xl border-2 border-zinc-950 bg-amber-300 text-zinc-950 font-bold text-sm shadow-[4px_4px_0px_0px_#09090b] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_0px_#09090b] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer"
+            >
+              <span>See my work</span>
+            </a>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-2xl border-2 border-zinc-950 bg-white text-zinc-950 font-bold text-sm shadow-[4px_4px_0px_0px_#09090b] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_0px_#09090b] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer"
+            >
+              <span>Let&apos;s talk</span>
+            </a>
+          </div>
+
+          {/* Quick External Links Row */}
+          <div className="flex items-center gap-4 text-xs font-mono font-bold text-zinc-700 dark:text-zinc-300 pt-1">
+            <a
+              href={personal.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline flex items-center gap-1"
+            >
+              <span>LinkedIn</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+            <span>•</span>
+            <a
+              href={personal.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline flex items-center gap-1"
+            >
+              <span>GitHub</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+            {onOpenResume && (
+              <>
+                <span>•</span>
+                <button
+                  onClick={onOpenResume}
+                  className="hover:underline flex items-center gap-1 cursor-pointer font-bold"
+                >
+                  <span>Resume</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </button>
+              </>
             )}
-          </button>
+          </div>
         </div>
       </div>
     </section>

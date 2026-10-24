@@ -7,8 +7,51 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
+:root {
+  --bg-cream: #faf7ee;
+  --card-light: #ffffff;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+/* Tactile neo-brutalist utility helpers */
+.tactile-card {
+  border: 2px solid #09090b;
+  box-shadow: 4px 4px 0px 0px #09090b;
+  transition: all 0.15s ease-in-out;
+}
+
+.dark .tactile-card {
+  border: 2px solid #27272a;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+.tactile-btn {
+  border: 2px solid #09090b;
+  box-shadow: 3px 3px 0px 0px #09090b;
+  transition: all 0.12s ease-in-out;
+  cursor: pointer;
+}
+
+.tactile-btn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px 0px #09090b;
+}
+
+.tactile-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px 0px #09090b;
+}
+
+.dark .tactile-btn {
+  border: 2px solid #3f3f46;
+  box-shadow: 3px 3px 0px 0px #000;
+}
+
+.dark .tactile-btn:hover {
+  box-shadow: 2px 2px 0px 0px #000;
 }
 
 /* Custom scrollbar */
@@ -19,9 +62,9 @@ html {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(120, 120, 120, 0.25);
+  background: rgba(120, 120, 120, 0.3);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(120, 120, 120, 0.45);
+  background: rgba(120, 120, 120, 0.5);
 }
