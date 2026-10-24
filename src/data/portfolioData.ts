@@ -72,18 +72,18 @@ export interface PortfolioData {
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Ameesh Mithanthaya",
-    title: "AI Engineer",
+    title: "Gen AI Engineer",
     headline:
-      "AI Engineer building autonomous agents, security guardrails, and production RAG pipelines with Python, LangGraph, FastAPI, and vector databases.",
+      "Gen AI Engineer building autonomous agents, security guardrails, and production RAG pipelines with Python, LangGraph, FastAPI, and vector databases.",
     location: "Mangalore / Udupi, India",
     email: "ameeshmith@gmail.com",
     phone: "+91 9035655107",
     linkedin: "https://linkedin.com/in/ameeshmith",
     github: "https://github.com/ameeshmith",
-    statusBadge: "Available for AI Engineering Roles",
+    statusBadge: "Available for Gen AI Roles",
     resumeUrl: "/resume.pdf",
     aboutBio: [
-      "I'm an AI engineer passionate about building hands-on AI tools, agentic workflows with LangGraph, and reliable production pipelines.",
+      "I'm a Gen AI engineer passionate about building hands-on LLM tools, agentic workflows with LangGraph, and reliable production pipelines.",
       "From filing an Indian patent on RAG news verification to building real-world projects during internships, I focus on writing clean, working code that solves actual problems."
     ],
   },

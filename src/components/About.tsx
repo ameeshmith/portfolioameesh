@@ -19,7 +19,7 @@ export const About: React.FC = () => {
           {/* Left: Bio & Highlights */}
           <div className="lg:col-span-7 space-y-6">
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-zinc-950 dark:text-white leading-tight">
-              AI Engineer.{' '}
+              Gen AI Engineer.{' '}
               <span className="text-amber-500 dark:text-amber-400 block sm:inline">
                 Builder of practical AI.
               </span>
@@ -27,7 +27,7 @@ export const About: React.FC = () => {
 
             <div className="space-y-4 text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed font-sans">
               <p>
-                Hi, I&apos;m Ameesh, an AI engineer passionate about artificial intelligence, agentic workflows, and machine learning systems. Throughout college and internships, I&apos;ve focused on building real, practical AI projects from autonomous agents with LangGraph to RAG pipelines and data workflows.
+                Hi, I&apos;m Ameesh, a Gen AI engineer passionate about artificial intelligence, agentic workflows, and LLM systems. Throughout college and internships, I&apos;ve focused on building real, practical AI projects from autonomous agents with LangGraph to RAG pipelines and data workflows.
               </p>
               <p>
                 I love getting my hands dirty with AI systems: exploring how models behave, optimizing vector retrieval, writing robust agent tools, and turning research concepts into working products that actually solve problems.

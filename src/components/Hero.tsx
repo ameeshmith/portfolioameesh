@@ -147,7 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
         <div className="lg:col-span-5 space-y-6 pt-2">
           {/* Punchy Mission Statement */}
           <p className="text-lg sm:text-2xl font-bold leading-snug text-zinc-900 dark:text-zinc-100 font-sans">
-            AI Engineer building autonomous agents, security guardrails, and production RAG pipelines.
+            Gen AI Engineer building autonomous agents, security guardrails, and production RAG pipelines.
           </p>
 
           {/* Highlight Wins Pills (matching Kanish's 1st / 2nd pill cards) */}

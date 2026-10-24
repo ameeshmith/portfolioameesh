@@ -36,13 +36,13 @@ export const Contact: React.FC = () => {
         <div className="space-y-2">
           <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md text-[11px] font-mono uppercase tracking-wider bg-emerald-100 dark:bg-emerald-950/70 border-2 border-emerald-500/50 text-emerald-800 dark:text-emerald-300 font-bold">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Open to AI Engineering Roles</span>
+            <span>Open to Gen AI Engineering Roles</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-zinc-950 dark:text-zinc-50 font-sans">
             Let&apos;s build intelligent systems together.
           </h2>
           <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-mono leading-relaxed max-w-xl">
-            Whether you&apos;re hiring an AI Engineer, want to discuss agentic workflows, or explore collaboration, my inbox is always open.
+            Whether you&apos;re hiring a Gen AI Engineer, want to discuss agentic workflows, or explore collaboration, my inbox is always open.
           </p>
         </div>
 
@@ -77,7 +77,7 @@ export const Contact: React.FC = () => {
 
           <a
             id="send-email-btn"
-            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${encodeURIComponent('Discussion: AI Engineering Opportunity')}`}
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${encodeURIComponent('Discussion: Gen AI Engineering Opportunity')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="tactile-btn inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-amber-400 dark:bg-amber-300 text-zinc-950 font-black text-xs font-mono uppercase tracking-wider border-2 border-zinc-950 shadow-[3px_3px_0px_0px_#09090b] cursor-pointer"
