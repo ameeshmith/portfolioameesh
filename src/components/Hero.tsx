@@ -147,7 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
         <div className="lg:col-span-5 space-y-6 pt-2">
           {/* Punchy Mission Statement */}
           <p className="text-lg sm:text-2xl font-bold leading-snug text-zinc-900 dark:text-zinc-100 font-sans">
-            Recent CS graduate building practical AI agents, search pipelines, and full-stack software.
+            AI & Software Engineer building autonomous agents, security guardrails, and production RAG pipelines.
           </p>
 
           {/* Highlight Wins Pills (matching Kanish's 1st / 2nd pill cards) */}
@@ -165,15 +165,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               </div>
             </div>
 
-            {/* Win 2: Pharmacovigilance */}
-            <div className="p-3.5 rounded-2xl border-2 border-zinc-950 bg-pink-200 dark:bg-pink-300 text-zinc-950 shadow-[4px_4px_0px_0px_#09090b] flex items-center gap-3">
-              <span className="text-lg sm:text-xl font-black shrink-0 px-2 py-1 rounded-xl bg-white border-2 border-zinc-950 shadow-[2px_2px_0px_0px_#000]">
-                100K+
+            {/* Win 2: AI Agent Security Gateway */}
+            <div className="p-3.5 rounded-2xl border-2 border-zinc-950 bg-emerald-200 dark:bg-emerald-300 text-zinc-950 shadow-[4px_4px_0px_0px_#09090b] flex items-center gap-3">
+              <span className="text-base sm:text-lg font-black shrink-0 px-2 py-1 rounded-xl bg-white border-2 border-zinc-950 shadow-[2px_2px_0px_0px_#000] font-mono">
+                &lt;3.5ms
               </span>
               <div className="text-xs sm:text-sm font-bold leading-tight">
-                FDA Adverse Reports Analyzed
+                AI Agent Security Gateway
                 <div className="text-[11px] font-normal text-zinc-800">
-                  Large-scale FAERS ETL and analytics engine
+                  LangGraph human-in-the-loop guardrail & prompt injection defense
                 </div>
               </div>
             </div>

@@ -74,13 +74,13 @@ export const portfolioData: PortfolioData = {
     name: "Ameesh Mithanthaya",
     title: "AI & Software Engineer",
     headline:
-      "Recent Computer Science graduate passionate about AI engineering, agentic workflows, and full-stack software development. Hands-on experience with Python, LangGraph, FastAPI, vector databases, and published patent research.",
+      "AI & Software Engineer building autonomous agents, security guardrails, and production RAG pipelines with Python, LangGraph, FastAPI, and vector databases.",
     location: "Mangalore / Udupi, India",
     email: "ameeshmith@gmail.com",
     phone: "+91 9035655107",
     linkedin: "https://linkedin.com/in/ameeshmith",
     github: "https://github.com/ameeshmith",
-    statusBadge: "Open to Full-Time Engineering Roles (Recent Grad)",
+    statusBadge: "Available for AI & Software Roles",
     resumeUrl: "/resume.pdf",
     aboutBio: [
       "I'm a Computer Science graduate passionate about building hands-on AI tools, agentic workflows with LangGraph, and full-stack applications.",
