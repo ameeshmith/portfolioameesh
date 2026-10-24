@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { TechStack } from './components/TechStack';
 import { Projects } from './components/Projects';
 import { Experience } from './components/Experience';
-import { Skills } from './components/Skills';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -13,34 +14,33 @@ export function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col font-sans selection:bg-emerald-500/20 selection:text-emerald-300 relative">
-      {/* Subtle top subtle grid background overlay */}
-      <div className="fixed inset-0 bg-grid-pattern opacity-30 pointer-events-none -z-10" />
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex flex-col font-sans transition-colors duration-200">
+        {/* Top Navbar */}
+        <Navbar />
 
-      {/* Sticky top navigation */}
-      <Navbar onOpenResume={() => setIsResumeOpen(true)} />
+        {/* Main Centered Single Column (matches reference layout) */}
+        <main className="flex-1 w-full max-w-2xl sm:max-w-3xl mx-auto px-4 sm:px-6 pb-12 space-y-2">
+          <Hero onOpenResume={() => setIsResumeOpen(true)} />
+          <TechStack />
+          <Projects />
+          <Experience />
+          <Education />
+          <Contact />
+        </main>
 
-      {/* Main Single Column Container */}
-      <main className="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Hero onOpenResume={() => setIsResumeOpen(true)} />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Education />
-        <Contact />
-      </main>
+        {/* Footer Container */}
+        <div className="w-full max-w-2xl sm:max-w-3xl mx-auto px-4 sm:px-6">
+          <Footer />
+        </div>
 
-      {/* Footer Container */}
-      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Footer />
+        {/* Resume Modal */}
+        <ResumeModal
+          isOpen={isResumeOpen}
+          onClose={() => setIsResumeOpen(false)}
+        />
       </div>
-
-      {/* Resume Modal */}
-      <ResumeModal
-        isOpen={isResumeOpen}
-        onClose={() => setIsResumeOpen(false)}
-      />
-    </div>
+    </ThemeProvider>
   );
 }
 

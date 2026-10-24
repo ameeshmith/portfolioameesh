@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="py-12 border-t border-zinc-900 text-zinc-400 text-xs font-mono">
+    <footer className="py-8 border-t border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-400 text-xs font-mono">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Left Credit */}
         <div className="flex items-center gap-2">
@@ -17,11 +17,10 @@ export const Footer: React.FC = () => {
           </span>
         </div>
 
-
         {/* Scroll To Top */}
         <button
           onClick={scrollToTop}
-          className="inline-flex items-center gap-1.5 p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700 transition-colors"
+          className="inline-flex items-center gap-1.5 p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white transition-colors cursor-pointer"
           title="Scroll to top"
         >
           <span>Top</span>
