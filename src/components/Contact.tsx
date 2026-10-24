@@ -39,10 +39,10 @@ export const Contact: React.FC = () => {
             <span>Open to Engineering & AI Roles</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-zinc-950 dark:text-zinc-50 font-sans">
-            Let's build reliable AI systems together.
+            Let&apos;s build great software together.
           </h2>
           <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-mono leading-relaxed max-w-xl">
-            Whether you have an opening for an AI Engineer, need an architecture review for agentic workflows, or want to discuss RAG pipeline optimizations, my inbox is always open.
+            Whether you&apos;re hiring a motivated AI / Software Engineer, want to discuss agentic workflows, or just want to chat about technology, my inbox is always open.
           </p>
         </div>
 

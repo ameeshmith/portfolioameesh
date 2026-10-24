@@ -19,18 +19,18 @@ export const About: React.FC = () => {
           {/* Left: Bio & Highlights */}
           <div className="lg:col-span-7 space-y-6">
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-zinc-950 dark:text-white leading-tight">
-              Engineer by trade.{' '}
+              Recent CS Graduate.{' '}
               <span className="text-amber-500 dark:text-amber-400 block sm:inline">
-                AI Architect by focus.
+                Builder of practical AI.
               </span>
             </h2>
 
             <div className="space-y-4 text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed font-sans">
               <p>
-                Hi, I&apos;m Ameesh, an AI engineer. For the past few years, I&apos;ve built agentic workflows, multi-tenant RAG systems, and data pipelines that run reliably in real-world environments.
+                Hi, I&apos;m Ameesh, a Computer Science graduate passionate about AI and software engineering. Throughout college and internships, I&apos;ve focused on building real, hands-on projects—from autonomous agents with LangGraph to RAG pipelines and data workflows.
               </p>
               <p>
-                I don&apos;t stop at generating completions. I look at edge cases, latency budgets, and retrieval failure modes: integrating cyclical critique gates, tenant-level filters in vector databases, and automated evaluation suites so the system never degrades.
+                I love getting my hands dirty with the full stack: exploring how models behave, optimizing vector retrieval, writing clean APIs, and turning concepts into working software that actually solves problems.
               </p>
             </div>
 

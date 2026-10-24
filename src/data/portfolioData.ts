@@ -74,17 +74,17 @@ export const portfolioData: PortfolioData = {
     name: "Ameesh Mithanthaya",
     title: "AI & Software Engineer",
     headline:
-      "AI Engineer experienced in building LLM applications, RAG pipelines, and agentic workflows. Focused on developing reliable, production-ready AI systems with Python, LangGraph, MCP, FastAPI, and vector databases.",
+      "Recent Computer Science graduate passionate about AI engineering, agentic workflows, and full-stack software development. Hands-on experience with Python, LangGraph, FastAPI, vector databases, and published patent research.",
     location: "Mangalore / Udupi, India",
     email: "ameeshmith@gmail.com",
     phone: "+91 9035655107",
     linkedin: "https://linkedin.com/in/ameeshmith",
     github: "https://github.com/ameeshmith",
-    statusBadge: "Available for AI / Software Engineering roles",
+    statusBadge: "Open to Full-Time Engineering Roles (Recent Grad)",
     resumeUrl: "/resume.pdf",
     aboutBio: [
-      "I specialize in bridging the gap between cutting-edge LLM capabilities and deterministic, robust backend systems. My core engineering focus is on agentic architectures with cyclical reflection, Model Context Protocol (MCP) tool design, and low-latency semantic search with vector databases.",
-      "Whether designing self-correcting research engines or production RAG pipelines with strict tenant isolation, I build AI systems designed to operate safely, efficiently, and predictably at scale."
+      "I'm a Computer Science graduate passionate about building hands-on AI tools, agentic workflows with LangGraph, and full-stack applications.",
+      "From filing an Indian patent on RAG news verification to building real-world projects during internships, I focus on writing clean, working code that solves actual problems."
     ],
   },
 

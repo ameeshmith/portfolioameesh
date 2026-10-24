@@ -69,7 +69,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   CURIOUS
                 </span>
                 <span className="text-zinc-700 dark:text-zinc-300 text-xs sm:text-sm">
-                  Asks why until the pipeline and failure modes make sense.
+                  Asks questions and digs into code until the system makes sense.
                 </span>
               </div>
 
@@ -82,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   AGENTIC
                 </span>
                 <span className="text-zinc-700 dark:text-zinc-300 text-xs sm:text-sm">
-                  Builds cyclical reflection graphs with automated critique gates.
+                  Builds hands-on with LangGraph, tool-calling agents, and structured workflows.
                 </span>
               </div>
 
@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   FAST
                 </span>
                 <span className="text-zinc-700 dark:text-zinc-300 text-xs sm:text-sm">
-                  Gets from architecture spec to working system quicker than expected.
+                  Quick learner who turns project ideas into working code.
                 </span>
               </div>
 
@@ -108,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                   OWNS IT
                 </span>
                 <span className="text-zinc-700 dark:text-zinc-300 text-xs sm:text-sm">
-                  The model, the vector indices, the backend, and evaluation CI/CD.
+                  Takes end-to-end responsibility from frontend UI to backend logic.
                 </span>
               </div>
             </div>
@@ -147,7 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
         <div className="lg:col-span-5 space-y-6 pt-2">
           {/* Punchy Mission Statement */}
           <p className="text-lg sm:text-2xl font-bold leading-snug text-zinc-900 dark:text-zinc-100 font-sans">
-            I build AI that takes the routine work, so people can do the work that matters.
+            Recent CS graduate building practical AI agents, search pipelines, and full-stack software.
           </p>
 
           {/* Highlight Wins Pills (matching Kanish's 1st / 2nd pill cards) */}
