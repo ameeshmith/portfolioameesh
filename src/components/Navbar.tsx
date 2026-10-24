@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { FileText, Menu, X, ArrowUpRight } from 'lucide-react';
+import { FileText, Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   onOpenResume?: () => void;
@@ -74,19 +74,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           })}
         </nav>
 
-        {/* Resume Button & Mobile Toggle */}
+        {/* Mobile Toggle */}
         <div className="flex items-center gap-2.5">
-          <button
-            id="navbar-resume-btn"
-            onClick={onOpenResume}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-medium rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 hover:text-white border border-zinc-700/80 hover:border-emerald-500/40 transition-all duration-200 shadow-sm group cursor-pointer"
-            title="View or Download Resume"
-          >
-            <FileText className="w-3.5 h-3.5 text-emerald-400 group-hover:scale-105 transition-transform" />
-            <span>Resume</span>
-            <ArrowUpRight className="w-3 h-3 text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </button>
-
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 rounded-lg bg-zinc-900/80 border border-zinc-800 text-zinc-400 hover:text-zinc-200"

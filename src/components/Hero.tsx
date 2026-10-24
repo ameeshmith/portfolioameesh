@@ -120,8 +120,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           {/* Mail Direct Link */}
           <a
             id="hero-mail-link"
-            href={`mailto:${personal.email}`}
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${encodeURIComponent('Connecting regarding AI / Engineering Opportunities')}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white border border-zinc-800 hover:border-zinc-700 transition-colors"
+            title="Compose email to Ameesh in Gmail"
           >
             <Mail className="w-3.5 h-3.5 text-zinc-400" />
             <span>Direct Message</span>

@@ -70,8 +70,12 @@ export const Contact: React.FC = () => {
             </button>
 
             <a
-              href={`mailto:${personal.email}`}
-              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-zinc-100 hover:bg-white text-zinc-950 font-semibold text-xs tracking-wide uppercase transition-colors shadow-sm"
+              id="send-email-btn"
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}&su=${encodeURIComponent('Discussion: AI & Software Engineering Opportunity')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-zinc-100 hover:bg-white text-zinc-950 font-semibold text-xs tracking-wide uppercase transition-colors shadow-sm cursor-pointer"
+              title="Compose email in Gmail"
             >
               <span>Send Email</span>
               <ArrowUpRight className="w-4 h-4" />

@@ -17,10 +17,6 @@ export const Footer: React.FC = () => {
           </span>
         </div>
 
-        {/* Center Tag */}
-        <div className="text-zinc-400">
-          Built with <span className="text-zinc-200">React</span>, <span className="text-zinc-200">Vite</span> & <span className="text-zinc-200">Tailwind CSS</span>
-        </div>
 
         {/* Scroll To Top */}
         <button
