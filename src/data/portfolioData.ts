@@ -121,7 +121,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "agent-security-gateway",
-      title: "AI Agent Security Gateway",
+      title: "SentinelMCP — AI Agent Security Gateway",
       subtitle: "Human-in-the-Loop Guardrail & Prompt Injection Defense",
       badge: "Security & Guardrails",
       summary:
@@ -138,8 +138,8 @@ export const portfolioData: PortfolioData = {
         "Developed an inbound prompt injection scanner that caught and quarantined 100% of malicious override attacks before tools were invoked, preventing rogue agent actions such as production database drops and unauthorized $5,000+ financial transfers.",
         "Created a role-based permission system and emergency kill switch that let operators safely edit dangerous requests in flight, stopping runaway agent loops and cutting incident review time by 40%.",
       ],
-      githubUrl: "https://github.com/ameeshmith/agent-security-gateway",
-      demoUrl: "https://github.com/ameeshmith/agent-security-gateway#demo",
+      githubUrl: "https://github.com/ameeshmith/SentinelMCP",
+      demoUrl: "https://github.com/ameeshmith/SentinelMCP#demo",
     },
     {
       id: "smart-news-synthesizer",
