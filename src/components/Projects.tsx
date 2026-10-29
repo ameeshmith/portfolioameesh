@@ -8,7 +8,6 @@ import {
   Cpu,
   CheckCircle2,
   X,
-  ArrowUpRight,
 } from 'lucide-react';
 import { GithubIcon } from './icons';
 
@@ -103,18 +102,6 @@ export const Projects: React.FC = () => {
                 >
                   <GithubIcon className="w-4 h-4" />
                 </a>
-
-                {project.demoUrl && (
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl border-2 border-zinc-950 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-950 dark:text-zinc-100 text-xs font-bold font-mono shadow-[2px_2px_0px_0px_#000] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
-                  >
-                    <span>view</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
-                  </a>
-                )}
 
                 <button
                   id={`deep-dive-${project.id}`}
