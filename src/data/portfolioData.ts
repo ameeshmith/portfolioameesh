@@ -182,8 +182,8 @@ export const portfolioData: PortfolioData = {
         "Built ETL pipelines for FAERS datasets, performing automated data cleaning, validation, standardization, and schema transformation.",
         "Designed an interactive dashboard with 15+ visualizations to identify reporting trends, demographic patterns, and drug-event relationships.",
       ],
-      githubUrl: "https://github.com/ameeshmith/pharma-watch",
-      demoUrl: "https://github.com/ameeshmith/pharma-watch#live-demo",
+      githubUrl: "https://github.com/ameeshmith/PharmaWatch",
+      demoUrl: "https://github.com/ameeshmith/PharmaWatch#live-demo",
     },
   ],
 
